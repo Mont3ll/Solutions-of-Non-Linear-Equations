@@ -1,0 +1,63 @@
+\documentclass[10pt,a4paper,oneside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\begin{document}
+    \title{Solutions of Non Linear Equations}
+    \maketitle
+    \begin{abstract}
+       Numerical analysis is the branch of mathematics that deals with the development and use of numerical methods for solving problems. It constitutes the study of algorithms that use numerical approximation for the problems of mathematical analysis.
+    \end{abstract}
+\section{Introduction}
+   Non linear equations are equations that cannot be expressed as a linear combination of the variables. Techniques in numerical are used to determine the roots of non linear equations using numerical methods. 
+\section{Methodology} 
+As non linear equations are difficult to solve analytically and require numerical methods, such as Bisection method, Newton Raphson method and Secant method, to determine their roots. 
+
+\subsection{Bisection method}
+This method involves dividing the interval containing the root into two subintervals and determining which subinterval the root lies in. The process is repeated until the desired accuracy is achieved.
+
+\subsection{Newton Raphson method} 
+This method uses a function and a derivative of the function to approximate the root of an equation and next approximation. 
+It involves choosing an initial guess and its derivative at that point.
+
+\subsection{Secant method}
+This is a variant of the Newton Raphson method but instead of using the derivative of the function, it uses an approximation of the derivative. 
+This method uses two initial guesses.
+\section{Key considerations for numerical methods to solve non linear equations}
+\subsection{Convergence}
+To ensure that the method used converges to the correct root wee need to check for the conditions of convergence of the chosen method.
+
+\subsection{Initial guess}
+Initial choice 
+\subsection{Accuracy} Desired accuracy of solution should be specified before using numerical method of analysis and should continue until desire accuracy is achieved.
+\section{Implementation}
+
+\subsection{Bisection implementation}
+Used to find the root of a continuous function in a given interval.
+The method is based on intermediate value theorem, which states that, f(x) is continuous on the interval [a,b] and f(a) and f(b) have opposite signs. 
+There exists at least one root of f(x) in interval [a,b].
+\subsubsection{Steps}
+i) Choose an interval [a,b] such that f(a) and f(b) are opposite sides.
+
+ii) Compute the midpoint: $$ c=(a+b)/2 $$
+
+iii) Evaluate f(c).
+
+iv) If $$ f(c) = 0 $$ then c is the root of f(x).
+
+v) If f(c) and f(a) have opposite signs, then the root is in the interval [a,c].
+Set $$ b = c $$ , then repeat step (ii).
+
+vi) If f(c) and f(b) have opposite signs, then the root is in the interval [a,c].
+
+vii) If max number of iterations is reached or the interval becomes small, then terminate.
+\subsection{Newton Raphson implementation}
+Used to find the root of differentiable functions.
+Uses the idea of a target line to iteratively approach the root of the function.
+Method starts with an initial guess x0 and it computes xn + 1 by finding the root of the target line at xn.
+The target line is defined by xn and its x-intercept is x(n)+1.
+\section*{Conclusion}
+The Bisection method is relatively slow in finding the root. However, it guarantees convergence to a certain root if certain conditions are met.
+
+\end{document} 
